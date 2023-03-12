@@ -5,7 +5,6 @@ body {
 }
 
 .bayan {
-  border: 0.0625rem solid #cccccc;
   max-width: 20rem;
   margin: 0 auto;
   font-family: Helvetica;
@@ -26,6 +25,7 @@ body {
 .bayan__label {
   border-top: 0.0625rem solid #d2d9e2;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: auto;
@@ -68,6 +68,17 @@ body {
   transition: 0.5s;  
 }
 
+.bayan__content {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.5s;
+  height: 0;
+}
+
 /*-- For active and hover item --*/
 .bayan__input:checked + .bayan__label > .bayan__label-text-wrapper > .bayan__label-text {
   color: #000000;  
@@ -79,6 +90,10 @@ body {
 
 .bayan__input:checked + .bayan__label > .bayan__label-text-wrapper .bayan__icon-img {
   transform: rotate(135deg);
+}
+
+.bayan__input:checked + .bayan__label > .bayan__content {
+  height: 20rem;
 }
 
 
