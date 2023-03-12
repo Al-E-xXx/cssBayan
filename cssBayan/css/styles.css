@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5f5eb;
+  overflow-y: scroll;
 }
 
 .bayan {
@@ -29,6 +30,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: auto;
+  transition: 0.5s;
 }
 
 .bayan__label-text-wrapper {
@@ -75,8 +77,12 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 1s;
   height: 0;
+}
+
+.footer-space {
+  height: 2rem;
 }
 
 /*-- For active and hover item --*/
@@ -124,7 +130,7 @@ body {
     font-size: 1.2rem;
   }
 
-  /*-- Hover behaviour --*/
+  /*-- Hover and active behavior --*/
   .bayan:hover .bayan__label-text {
     color: #000000;
   }
@@ -135,5 +141,25 @@ body {
 
   .bayan__label:hover {
     cursor: pointer;
+  }
+
+  .bayan__label:hover > .bayan__content {
+    height: 20rem;
+  }
+
+  .bayan__label:hover  > .bayan__label-text-wrapper .bayan__icon-img {
+    transform: rotate(135deg);
+  }
+
+  .bayan__label:active {
+    opacity: 0.5;
+  }
+
+  .bayan__label:active > .bayan__label-text-wrapper > .bayan__label-text { 
+    color: #0059d9 !important;
+  }
+
+  .bayan__label:active > .bayan__label-text-wrapper > .bayan__label-icon {
+    background-color: #0059d9 !important;
   }
 }
