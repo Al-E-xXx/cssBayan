@@ -103,7 +103,7 @@ body {
 }
 
 .bayan__input:checked + .bayan__label > .bayan__content {
-  height: 20rem;
+  height: 15rem;
 }
 
 
@@ -118,7 +118,7 @@ body {
 
   .bayan__label-text-wrapper {    
     font-size: 1rem;
-  }
+  }  
 }
 
 @media (min-width: 820px) { 
@@ -165,5 +165,9 @@ body {
 
   .bayan__label:active > .bayan__label-text-wrapper > .bayan__label-icon {
     background-color: #0059d9 !important;
+  }
+
+  .bayan__input:checked + .bayan__label > .bayan__content {
+    height: 20rem;
   }
 }
