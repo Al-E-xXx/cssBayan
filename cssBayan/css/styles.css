@@ -106,6 +106,18 @@ body {
   height: 15rem;
 }
 
+.bayan__label:active {
+  opacity: 0.5;
+}
+
+.bayan__label:active > .bayan__label-text-wrapper > .bayan__label-text { 
+  color: #0059d9 !important;
+}
+
+.bayan__label:active > .bayan__label-text-wrapper > .bayan__label-icon {
+  background-color: #0059d9 !important;
+}
+
 
 @media (min-width: 420px) {
   .bayan {    
@@ -153,19 +165,7 @@ body {
 
   .bayan__label:hover  > .bayan__label-text-wrapper .bayan__icon-img {
     transform: rotate(135deg);
-  }
-
-  .bayan__label:active {
-    opacity: 0.5;
-  }
-
-  .bayan__label:active > .bayan__label-text-wrapper > .bayan__label-text { 
-    color: #0059d9 !important;
-  }
-
-  .bayan__label:active > .bayan__label-text-wrapper > .bayan__label-icon {
-    background-color: #0059d9 !important;
-  }
+  }  
 
   .bayan__input:checked + .bayan__label > .bayan__content {
     height: 20rem;
