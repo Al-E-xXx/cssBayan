@@ -171,3 +171,13 @@ body {
     height: 20rem;
   }
 }
+
+@media (min-width: 1280px) { 
+  .bayan {    
+    max-width: 45rem;    
+  }
+
+  .bayan__input:checked + .bayan__label > .bayan__content {
+    height: 21rem;
+  }
+}
