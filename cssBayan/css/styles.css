@@ -118,6 +118,20 @@ body {
   background-color: #0059d9 !important;
 }
 
+@media (hover: hover) {
+  .bayan__label:hover {
+    cursor: pointer;
+  }
+
+  .bayan__label:hover > .bayan__content {
+    height: 15rem;
+  }
+
+  .bayan__label:hover  > .bayan__label-text-wrapper .bayan__icon-img {
+    transform: rotate(135deg);
+  }
+}
+
 
 @media (min-width: 420px) {
   .bayan {    
@@ -155,17 +169,11 @@ body {
     opacity: 1;
   }
 
-  .bayan__label:hover {
-    cursor: pointer;
-  }
-
-  .bayan__label:hover > .bayan__content {
-    height: 20rem;
-  }
-
-  .bayan__label:hover  > .bayan__label-text-wrapper .bayan__icon-img {
-    transform: rotate(135deg);
-  }  
+  @media (hover: hover) {
+    .bayan__label:hover > .bayan__content {
+      height: 20rem;
+    }
+  } 
 
   .bayan__input:checked + .bayan__label > .bayan__content {
     height: 20rem;
@@ -180,4 +188,10 @@ body {
   .bayan__input:checked + .bayan__label > .bayan__content {
     height: 21rem;
   }
+
+  @media (hover: hover) {
+    .bayan__label:hover > .bayan__content {
+      height: 21rem;
+    }
+  } 
 }
