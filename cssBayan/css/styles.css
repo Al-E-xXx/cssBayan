@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5eb;
+  overflow-y: scroll;
+}
+
+.bayan {
+  max-width: 20rem;
+  margin: 0 auto;
+  font-family: Helvetica;
+  padding: 0 1rem 0 1rem;
+}
+
+.bayan__header {
+  margin: 3rem 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: 0.5s;
+}
+
+.bayan__input {
+  display: none;
+}
+
+.bayan__label {
+  border-top: 0.0625rem solid #d2d9e2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  transition: 0.5s;
+}
+
+.bayan__label-text-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  font-size: 0.775rem;
+  font-weight: 800;
+  transition: 0.5s;
+}
+
+.bayan__label-text {
+  color: #0059d9;
+  transition: 0.5s;
+}
+
+.bayan__label-icon {
+  display: block;
+  background-color: #000000;
+  padding: 0;
+  width: 1rem;
+  height: 1rem;
+  overflow: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.bayan__icon-img {
+  margin-top: -0.2rem;
+  margin-left: -0.2rem;
+  padding: 0;
+  object-fit: cover;
+  width: 1.5rem;
+  display: flex;
+  transition: 0.5s;  
+}
+
+.bayan__content {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transition: 1s;
+  height: 0;
+}
+
+.bayan__meme {
+  margin-bottom: 1rem;
+}
+
+.footer-space {
+  height: 2rem;
+}
+
+/*-- For active and hover item --*/
+.bayan__input:checked + .bayan__label > .bayan__label-text-wrapper > .bayan__label-text {
+  color: #000000;  
+}
+
+.bayan__input:checked + .bayan__label > .bayan__label-text-wrapper > .bayan__label-icon {
+  background-color: #000000;
+}
+
+.bayan__input:checked + .bayan__label > .bayan__label-text-wrapper .bayan__icon-img {
+  transform: rotate(135deg);
+}
+
+.bayan__input:checked + .bayan__label > .bayan__content {
+  height: 15rem;
+}
+
+.bayan__label:active {
+  opacity: 0.5;
+}
+
+.bayan__label:active > .bayan__label-text-wrapper > .bayan__label-text { 
+  color: #0059d9 !important;
+}
+
+.bayan__label:active > .bayan__label-text-wrapper > .bayan__label-icon {
+  background-color: #0059d9 !important;
+}
+
+@media (hover: hover) {
+  .bayan__label:hover {
+    cursor: pointer;
+  }
+
+  .bayan__label:hover > .bayan__content {
+    height: 15rem;
+  }
+
+  .bayan__label:hover  > .bayan__label-text-wrapper .bayan__icon-img {
+    transform: rotate(135deg);
+  }
+}
+
+
+@media (min-width: 420px) {
+  .bayan {    
+    max-width: 35rem;    
+  }
+
+  .bayan__header {
+    font-size: 1.6rem;
+  }
+
+  .bayan__label-text-wrapper {    
+    font-size: 1rem;
+  }  
+}
+
+@media (min-width: 820px) { 
+  .bayan {    
+    max-width: 40rem;    
+  }
+
+  .bayan__header {
+    font-size: 2rem;
+  }
+
+  .bayan__label-text-wrapper {    
+    font-size: 1.2rem;
+  }
+
+  /*-- Hover and active behavior --*/
+  .bayan:hover .bayan__label-text {
+    color: #000000;
+  }
+
+  .bayan:hover .bayan__label-icon {
+    opacity: 1;
+  }
+
+  @media (hover: hover) {
+    .bayan__label:hover > .bayan__content {
+      height: 20rem;
+    }
+  } 
+
+  .bayan__input:checked + .bayan__label > .bayan__content {
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1280px) { 
+  .bayan {    
+    max-width: 45rem;    
+  }
+
+  .bayan__input:checked + .bayan__label > .bayan__content {
+    height: 21rem;
+  }
+
+  @media (hover: hover) {
+    .bayan__label:hover > .bayan__content {
+      height: 21rem;
+    }
+  } 
+}
